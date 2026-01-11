@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting…</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at top, #0891b2, #1e293b);
+        color: #f9fafb;
+      }
+
+      .card {
+        text-align: center;
+        padding: 2.5rem 3rem;
+        border-radius: 1.5rem;
+        background: rgba(15, 23, 42, 0.85);
+        box-shadow: 0 25px 50px rgba(15, 23, 42, 0.55);
+        backdrop-filter: blur(6px);
+      }
+
+      .spinner {
+        width: 56px;
+        height: 56px;
+        border: 4px solid rgba(248, 250, 252, 0.25);
+        border-top-color: #67e8f9;
+        border-radius: 50%;
+        margin: 0 auto 1.25rem;
+        animation: spin 1s linear infinite;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        margin: 0 0 0.75rem;
+      }
+
+      p {
+        margin: 0;
+        color: rgba(248, 250, 252, 0.75);
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="spinner" aria-hidden="true"></div>
+      <h1>Loading Resume…</h1>
+            <p>Welcome!</p>
+
+      <p>Please wait while we redirect you to my resume files.</p>
+    </main>
+
+    <script>
+      const discordInvite = "https://bit.ly/Sushant_Nagi_DTU"; // TODO: replace with your resume URL
+      const redirectDelayMs = 5000; // adjust if you want a longer pause
+
+      window.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          window.location.replace(discordInvite);
+        }, redirectDelayMs);
+      });
+    </script>
+  </body>
+</html>
